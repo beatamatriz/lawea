@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtbelqevgrt6c"]
+
+[ext_resource type="Script" path="res://wulu/pj.gd" id="1_jpxw0"]
+[ext_resource type="Texture2D" uid="uid://dyhtx0ll81qpe" path="res://icon.svg" id="2_xx20w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1n232"]
+size = Vector2(130, 121)
+
+[node name="Pj" type="CharacterBody2D"]
+script = ExtResource("1_jpxw0")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_xx20w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_1n232")
