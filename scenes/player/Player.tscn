@@ -3,9 +3,8 @@
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_xsytj"]
 [ext_resource type="Texture2D" uid="uid://p7am4hj5l1e2" path="res://assets/machango animacion/machango.png" id="2_wlkvc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kmadu"]
-radius = 50.0
-height = 172.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2af4"]
+size = Vector2(124, 133)
 
 [sub_resource type="Animation" id="Animation_gcbrl"]
 length = 0.001
@@ -49,9 +48,8 @@ _data = {
 script = ExtResource("1_xsytj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 91)
-shape = SubResource("CapsuleShape2D_kmadu")
+position = Vector2(-1, 100.5)
+shape = SubResource("RectangleShape2D_d2af4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_wlkvc")
