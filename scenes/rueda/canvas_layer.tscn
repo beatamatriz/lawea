@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://crmiuc3jv7u87"]
+
+[ext_resource type="PackedScene" uid="uid://bafu8upt437sh" path="res://scenes/ods_wheel.tscn" id="1_i27ns"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+
+[node name="OdsWheel" parent="CenterContainer" instance=ExtResource("1_i27ns")]
+scale = Vector2(0.385185, 0.385185)
