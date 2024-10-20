@@ -1,9 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://b44nncx0kjpq8"]
+[gd_scene load_steps=25 format=3 uid="uid://b44nncx0kjpq8"]
 
 [ext_resource type="PackedScene" uid="uid://cobvfiqmp6hfq" path="res://scenes/ODS/ods.tscn" id="1_1scg0"]
 [ext_resource type="Script" path="res://scenes/level/level.gd" id="1_5q0lf"]
 [ext_resource type="PackedScene" uid="uid://b3ejybwo2gt8r" path="res://scenes/player/Player.tscn" id="3_nw064"]
+[ext_resource type="Texture2D" uid="uid://dplhg4g8wilgn" path="res://assets/ods/asd.png" id="3_wggwf"]
 [ext_resource type="Texture2D" uid="uid://bke10eglfoaqa" path="res://tilemap/tilemap.png" id="4_7td7f"]
+[ext_resource type="Texture2D" uid="uid://c3x71kxhinj4t" path="res://assets/ods/free.png" id="6_jl0id"]
+[ext_resource type="Texture2D" uid="uid://ch7s1lgkdg3yd" path="res://assets/ods/clover.png" id="6_s5q1l"]
+[ext_resource type="Texture2D" uid="uid://c0ee6jpx1cugr" path="res://assets/ods/chemtrails.png" id="7_kw2iq"]
+[ext_resource type="Texture2D" uid="uid://5pfrp2p6r1f8" path="res://assets/ods/elden.png" id="7_p5yix"]
+[ext_resource type="Texture2D" uid="uid://rxdb0q84l6ku" path="res://assets/ods/calc.png" id="8_g4y5l"]
+[ext_resource type="Texture2D" uid="uid://bhqa407kpbkld" path="res://assets/ods/cube.png" id="8_mgeqv"]
+[ext_resource type="Texture2D" uid="uid://36mfq4cb13r1" path="res://assets/ods/book.png" id="9_sp0fh"]
+[ext_resource type="Texture2D" uid="uid://1pwttgqerfij" path="res://assets/ods/beef.png" id="10_eoabm"]
+[ext_resource type="Texture2D" uid="uid://rho0bbnbqrs2" path="res://assets/ods/heart.png" id="14_36uci"]
+[ext_resource type="Texture2D" uid="uid://b0ebxd7aicni0" path="res://assets/ods/idealista.png" id="15_m10bq"]
+[ext_resource type="Texture2D" uid="uid://cotx4e1h265m3" path="res://assets/ods/piracy.png" id="16_eebah"]
+[ext_resource type="Texture2D" uid="uid://c0u6bxhvqq7g4" path="res://assets/ods/sun.png" id="17_1brpq"]
+[ext_resource type="Texture2D" uid="uid://v35tfd1i5o8j" path="res://assets/ods/palestina_alt.png" id="18_64w8l"]
+[ext_resource type="Texture2D" uid="uid://3pppofcjrbp0" path="res://assets/ods/trans.png" id="19_ilegi"]
+[ext_resource type="Texture2D" uid="uid://dkixspwwkulab" path="res://assets/ods/water.png" id="20_oey07"]
+[ext_resource type="Texture2D" uid="uid://c5nt0i6xjasq3" path="res://assets/ods/work.png" id="21_iwnc2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xu38q"]
 texture = ExtResource("4_7td7f")
@@ -794,8 +811,12 @@ size = Vector2(90, 20)
 [node name="Level" type="Node2D"]
 script = ExtResource("1_5q0lf")
 
-[node name="ODS" parent="." instance=ExtResource("1_1scg0")]
+[node name="ASD" parent="." instance=ExtResource("1_1scg0")]
 position = Vector2(330, -124)
+
+[node name="Asd" type="Sprite2D" parent="ASD"]
+position = Vector2(-330, 124)
+texture = ExtResource("3_wggwf")
 
 [node name="Player" parent="." instance=ExtResource("3_nw064")]
 position = Vector2(-110, -96)
@@ -810,5 +831,102 @@ format = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Salida"]
 position = Vector2(35, 0)
 shape = SubResource("RectangleShape2D_8g1kf")
+
+[node name="free" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="free"]
+texture = ExtResource("6_jl0id")
+metadata/_edit_lock_ = true
+
+[node name="elden" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="elden"]
+texture = ExtResource("7_p5yix")
+metadata/_edit_lock_ = true
+
+[node name="cube" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="cube"]
+texture = ExtResource("8_mgeqv")
+metadata/_edit_lock_ = true
+
+[node name="clover" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Clover" type="Sprite2D" parent="clover"]
+texture = ExtResource("6_s5q1l")
+metadata/_edit_lock_ = true
+
+[node name="chemtrails" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Chemtrails" type="Sprite2D" parent="chemtrails"]
+texture = ExtResource("7_kw2iq")
+metadata/_edit_lock_ = true
+
+[node name="calc" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Calc" type="Sprite2D" parent="calc"]
+texture = ExtResource("8_g4y5l")
+metadata/_edit_lock_ = true
+
+[node name="book" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Book" type="Sprite2D" parent="book"]
+texture = ExtResource("9_sp0fh")
+metadata/_edit_lock_ = true
+
+[node name="beef" parent="." instance=ExtResource("1_1scg0")]
+position = Vector2(145, 192)
+
+[node name="Beef" type="Sprite2D" parent="beef"]
+texture = ExtResource("10_eoabm")
+metadata/_edit_lock_ = true
+
+[node name="heart" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="heart"]
+texture = ExtResource("14_36uci")
+metadata/_edit_lock_ = true
+
+[node name="idealista" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="idealista"]
+texture = ExtResource("15_m10bq")
+metadata/_edit_lock_ = true
+
+[node name="piracy" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="piracy"]
+texture = ExtResource("16_eebah")
+metadata/_edit_lock_ = true
+
+[node name="sun" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="sun"]
+texture = ExtResource("17_1brpq")
+metadata/_edit_lock_ = true
+
+[node name="palestine" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="palestine"]
+texture = ExtResource("18_64w8l")
+metadata/_edit_lock_ = true
+
+[node name="trans" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="trans"]
+texture = ExtResource("19_ilegi")
+metadata/_edit_lock_ = true
+
+[node name="water" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="water"]
+texture = ExtResource("20_oey07")
+metadata/_edit_lock_ = true
+
+[node name="work" parent="." instance=ExtResource("1_1scg0")]
+
+[node name="Sprite2D" type="Sprite2D" parent="work"]
+texture = ExtResource("21_iwnc2")
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Salida" to="." method="_on_salida_body_entered"]
