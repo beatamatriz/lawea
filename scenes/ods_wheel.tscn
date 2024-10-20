@@ -1,0 +1,143 @@
+[gd_scene load_steps=19 format=3 uid="uid://d3ytm01sx6f5v"]
+
+[ext_resource type="Texture2D" uid="uid://6m4n7tx66wg6" path="res://assets/ods/ODS_Wheel.png" id="1_une4v"]
+[ext_resource type="Texture2D" uid="uid://rho0bbnbqrs2" path="res://assets/ods/heart.png" id="2_qsjjs"]
+[ext_resource type="Texture2D" uid="uid://5pfrp2p6r1f8" path="res://assets/ods/elden.png" id="3_y5sq6"]
+[ext_resource type="Texture2D" uid="uid://1pwttgqerfij" path="res://assets/ods/beef.png" id="4_8brqq"]
+[ext_resource type="Texture2D" uid="uid://cotx4e1h265m3" path="res://assets/ods/piracy.png" id="5_g5vug"]
+[ext_resource type="Texture2D" uid="uid://v35tfd1i5o8j" path="res://assets/ods/palestina_alt.png" id="6_1o4xq"]
+[ext_resource type="Texture2D" uid="uid://bngwjvcs6vrsy" path="res://assets/ods/octolin.png" id="7_8ahwo"]
+[ext_resource type="Texture2D" uid="uid://ch7s1lgkdg3yd" path="res://assets/ods/clover.png" id="8_fhs8n"]
+[ext_resource type="Texture2D" uid="uid://rxdb0q84l6ku" path="res://assets/ods/calc.png" id="9_myvmy"]
+[ext_resource type="Texture2D" uid="uid://36mfq4cb13r1" path="res://assets/ods/book.png" id="10_8qrq8"]
+[ext_resource type="Texture2D" uid="uid://bhqa407kpbkld" path="res://assets/ods/cube.png" id="11_1005i"]
+[ext_resource type="Texture2D" uid="uid://3pppofcjrbp0" path="res://assets/ods/trans.png" id="12_lehk1"]
+[ext_resource type="Texture2D" uid="uid://dkixspwwkulab" path="res://assets/ods/water.png" id="13_qi6qd"]
+[ext_resource type="Texture2D" uid="uid://c0u6bxhvqq7g4" path="res://assets/ods/sun.png" id="14_hyw3c"]
+[ext_resource type="Texture2D" uid="uid://c5nt0i6xjasq3" path="res://assets/ods/work.png" id="15_qqqf3"]
+[ext_resource type="Texture2D" uid="uid://b0ebxd7aicni0" path="res://assets/ods/idealista.png" id="16_2qo7w"]
+[ext_resource type="Texture2D" uid="uid://dplhg4g8wilgn" path="res://assets/ods/asd.png" id="17_1mpjh"]
+[ext_resource type="Texture2D" uid="uid://c0ee6jpx1cugr" path="res://assets/ods/chemtrails.png" id="18_v3fqm"]
+
+[node name="OdsWheel" type="Sprite2D"]
+position = Vector2(259, 270)
+texture = ExtResource("1_une4v")
+
+[node name="Heart" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359, -266)
+rotation = 0.864207
+scale = Vector2(0.869569, 0.869569)
+texture = ExtResource("2_qsjjs")
+
+[node name="Elden" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-79.2381, -440.601)
+rotation = -0.19396
+scale = Vector2(0.904517, 0.904517)
+texture = ExtResource("3_y5sq6")
+
+[node name="Beef" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(236, -380)
+rotation = 0.536777
+scale = Vector2(0.876335, 0.876335)
+texture = ExtResource("4_8brqq")
+
+[node name="Piracy" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(80, -439)
+rotation = 0.153637
+scale = Vector2(0.852148, 0.852148)
+texture = ExtResource("5_g5vug")
+
+[node name="PalestinaAlt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-234, -379)
+rotation = -0.567045
+scale = Vector2(0.780292, 0.780292)
+texture = ExtResource("6_1o4xq")
+
+[node name="Octolin" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-430, -125)
+rotation = -1.35454
+scale = Vector2(0.877277, 0.877277)
+texture = ExtResource("7_8ahwo")
+
+[node name="Clover" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-355, -273)
+rotation = -0.920887
+scale = Vector2(0.928121, 0.928121)
+texture = ExtResource("8_fhs8n")
+
+[node name="Calc" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-158, 414)
+rotation = -2.74228
+scale = Vector2(0.926472, 0.926472)
+texture = ExtResource("9_myvmy")
+
+[node name="Book" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(425, -122)
+rotation = 1.26745
+scale = Vector2(0.883854, 0.883854)
+texture = ExtResource("10_8qrq8")
+
+[node name="Cube" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(3.00001, 446)
+rotation = -3.12676
+scale = Vector2(0.923513, 0.923513)
+texture = ExtResource("11_1005i")
+
+[node name="Trans" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(447, 38)
+rotation = 1.61296
+scale = Vector2(0.918293, 0.918293)
+texture = ExtResource("12_lehk1")
+
+[node name="Water" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(406, 199)
+rotation = 2.05171
+scale = Vector2(0.862356, 0.862356)
+texture = ExtResource("13_qi6qd")
+
+[node name="Sun" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(304, 326)
+rotation = 2.35619
+scale = Vector2(0.902773, 0.902773)
+texture = ExtResource("14_hyw3c")
+
+[node name="Work" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(166, 414)
+rotation = 2.76687
+scale = Vector2(0.871942, 0.871942)
+texture = ExtResource("15_qqqf3")
+
+[node name="Idealista" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-297, 333)
+rotation = -2.44493
+scale = Vector2(0.84043, 0.84043)
+texture = ExtResource("16_2qo7w")
+
+[node name="Asd" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-401, 200)
+rotation = -1.97856
+scale = Vector2(0.870798, 0.870798)
+texture = ExtResource("17_1mpjh")
+
+[node name="Chemtrails" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-443, 39)
+rotation = -1.6033
+scale = Vector2(0.688981, 0.688981)
+texture = ExtResource("18_v3fqm")
