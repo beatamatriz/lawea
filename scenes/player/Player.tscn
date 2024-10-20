@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://p7am4hj5l1e2" path="res://assets/machango animacion/machango.png" id="2_wlkvc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2af4"]
-size = Vector2(124, 133)
+size = Vector2(122, 122)
 
 [sub_resource type="Animation" id="Animation_gcbrl"]
 length = 0.001
@@ -48,10 +48,12 @@ _data = {
 script = ExtResource("1_xsytj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 100.5)
+position = Vector2(-1, 106)
 shape = SubResource("RectangleShape2D_d2af4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 15.5)
+scale = Vector2(1, 0.907738)
 texture = ExtResource("2_wlkvc")
 hframes = 2
 vframes = 2
