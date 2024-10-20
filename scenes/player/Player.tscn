@@ -1,22 +1,68 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3ejybwo2gt8r"]
+[gd_scene load_steps=7 format=3 uid="uid://b3ejybwo2gt8r"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_xsytj"]
-[ext_resource type="Texture2D" uid="uid://cjxxc3jdxp66g" path="res://assets/placeholders/latipa.png" id="2_qqcvo"]
+[ext_resource type="Texture2D" uid="uid://p7am4hj5l1e2" path="res://assets/machango animacion/machango.png" id="2_wlkvc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvtt5"]
-size = Vector2(103, 49)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kmadu"]
+radius = 50.0
+height = 172.0
+
+[sub_resource type="Animation" id="Animation_xyaia"]
+resource_name = "quieto"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_gcbrl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fd2i"]
+_data = {
+"RESET": SubResource("Animation_gcbrl"),
+"quieto": SubResource("Animation_xyaia")
+}
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xsytj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -83.75)
-scale = Vector2(17.3, 15.525)
-texture = ExtResource("2_qqcvo")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16.5, 47.5)
-shape = SubResource("RectangleShape2D_bvtt5")
+visible = false
+position = Vector2(0, 91)
+shape = SubResource("CapsuleShape2D_kmadu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wlkvc")
+hframes = 2
+vframes = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4fd2i")
+}
+autoplay = "quieto"

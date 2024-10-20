@@ -4,8 +4,6 @@ extends Node2D
 func change_scene(scene_name):
 	get_tree().change_scene_to_file(scene_name)
 
-func _on_salida_body_entered(body):
-	change_scene(#ruta de la escena)
-
-
-
+# rellenar luego miau pero es que si no da error
+#func _on_salida_body_entered(body):
+	#change_scene(ruta de la escena)
