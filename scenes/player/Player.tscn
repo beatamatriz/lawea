@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3ejybwo2gt8r"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_xsytj"]
-[ext_resource type="Texture2D" uid="uid://cjxxc3jdxp66g" path="res://bea/latipa.png" id="2_qqcvo"]
+[ext_resource type="Texture2D" uid="uid://cjxxc3jdxp66g" path="res://assets/placeholders/latipa.png" id="2_qqcvo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvtt5"]
 size = Vector2(103, 49)
@@ -10,9 +10,13 @@ size = Vector2(103, 49)
 script = ExtResource("1_xsytj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(17.3, 7.15)
+position = Vector2(0, -83.75)
+scale = Vector2(17.3, 15.525)
 texture = ExtResource("2_qqcvo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16.5, 47.5)
 shape = SubResource("RectangleShape2D_bvtt5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
