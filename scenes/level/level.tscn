@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b44nncx0kjpq8"]
+[gd_scene load_steps=15 format=3 uid="uid://b44nncx0kjpq8"]
 
 [ext_resource type="PackedScene" uid="uid://cobvfiqmp6hfq" path="res://scenes/ODS/ods.tscn" id="1_1scg0"]
 [ext_resource type="Script" path="res://scenes/level/level.gd" id="1_5q0lf"]
@@ -7,7 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://dplhg4g8wilgn" path="res://assets/ods/asd.png" id="3_oquxv"]
 [ext_resource type="Texture2D" uid="uid://bke10eglfoaqa" path="res://tilemap/tilemap.png" id="4_7td7f"]
 [ext_resource type="Texture2D" uid="uid://1pwttgqerfij" path="res://assets/ods/beef.png" id="4_uo31b"]
-[ext_resource type="PackedScene" uid="uid://d3ytm01sx6f5v" path="res://scenes/ods_wheel.tscn" id="8_aykvi"]
+
+[ext_resource type="Texture2D" uid="uid://rho0bbnbqrs2" path="res://assets/ods/heart.png" id="5_jop2y"]
+[ext_resource type="Texture2D" uid="uid://5pfrp2p6r1f8" path="res://assets/ods/elden.png" id="6_28hk2"]
+[ext_resource type="Texture2D" uid="uid://cotx4e1h265m3" path="res://assets/ods/piracy.png" id="7_ernls"]
+[ext_resource type="PackedScene" uid="uid://bafu8upt437sh" path="res://scenes/ods_wheel.tscn" id="8_aykvi"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xu38q"]
 texture = ExtResource("4_7td7f")
@@ -2383,10 +2388,23 @@ position = Vector2(-564, 778)
 texture = ExtResource("4_uo31b")
 metadata/_edit_lock_ = true
 
-[node name="ODS2" parent="." instance=ExtResource("1_1scg0")]
+[node name="Heart" parent="." instance=ExtResource("1_1scg0")]
 position = Vector2(-562, 488)
 
-[node name="Sprite2D" type="Sprite2D" parent="ODS2"]
+[node name="Sprite2D" type="Sprite2D" parent="Heart"]
+texture = ExtResource("5_jop2y")
+
+[node name="Elden" parent="." instance=ExtResource("1_1scg0")]
+position = Vector2(-281, 244)
+
+[node name="Sprite2D" type="Sprite2D" parent="Elden"]
+texture = ExtResource("6_28hk2")
+
+[node name="Piracy" parent="." instance=ExtResource("1_1scg0")]
+position = Vector2(-281, 244)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piracy"]
+texture = ExtResource("7_ernls")
 
 [node name="maze" type="Sprite2D" parent="."]
 visible = false
@@ -2394,9 +2412,6 @@ position = Vector2(-752, -2778.08)
 scale = Vector2(12.4889, 18.4008)
 texture = ExtResource("2_vrneb")
 metadata/_edit_lock_ = true
-
-[node name="ODS" parent="." instance=ExtResource("1_1scg0")]
-position = Vector2(-281, 244)
 
 [node name="Player" parent="." instance=ExtResource("3_nw064")]
 position = Vector2(-642, 105)
