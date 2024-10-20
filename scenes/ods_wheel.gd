@@ -4,7 +4,7 @@ extends Sprite2D
 func _process(_delta):
 	if Globals.ods == "beef":
 		show_icon($beef)
-	elif Globals.ods == "Asd":
+	elif Globals.ods == "asd":
 		show_icon($Asd)
 	elif Globals.ods == "Heart":
 		show_icon($Heart)
