@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjocl0visi4em"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mdsg5"]
+font_size = 70
+font_color = Color(0.909383, 1, 0.999941, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_direction = 3
+layout_mode = 2
+color = Color(0.157709, 0.20229, 0.255861, 1)
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "¡Has ganado! :3"
+label_settings = SubResource("LabelSettings_mdsg5")
+horizontal_alignment = 1
+vertical_alignment = 1

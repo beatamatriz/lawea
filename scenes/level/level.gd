@@ -4,9 +4,11 @@ extends Node2D
 func change_scene(scene_name):
 	get_tree().change_scene_to_file(scene_name)
 
- ##rellenar luego miau pero es que si no da error
-#func _on_salida_body_entered(body):
-	#if Globals.item == 17:
-		#change_scene("res://scenes/UI/UI.tscn")
-	#else:
-		
+func _on_salida_body_entered(_body):
+	if Globals.item == 17:
+		change_scene("res://scenes/UI/UI.tscn")
+	else:
+		$Mensajito.show()
+
+func _on_salida_body_exited(_body):
+	$Mensajito.hide()

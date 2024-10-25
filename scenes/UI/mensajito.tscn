@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddresitm4gpec"]
+
+[ext_resource type="Script" path="res://scenes/UI/mensajito.gd" id="1_tepoj"]
+
+[node name="Mensajito" type="CanvasLayer"]
+script = ExtResource("1_tepoj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.6
+anchor_right = 0.95
+anchor_bottom = 0.92
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+self_modulate = Color(0.12397, 0.224666, 0.294549, 1)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+text = "Holaa
+:3"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
